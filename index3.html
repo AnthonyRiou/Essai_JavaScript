@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="unNom"/>
+        <button id="Go" type="submit">Go</button>
+    </form>
+    
+    
+<div id=container></div>
+
+<script>
+
+let texte = document.getElementsByName("unNom")[0];
+console.log(texte);
+document.getElementById("Go").addEventListener("click", () => {
+event.preventDefault()
+// let txtTape = document.createTextNode(texte,value);
+// let para = document.createElement("p");
+
+// para.innerHTML = `${texte}`;
+container.innerHTML = `${texte.value}`;
+}
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let texte = document.getElementsByName("unNom")[0];
+
+// document.getElementById("Go").addEventListener("click", () => {
+//     event.preventDefault()
+//     let txtTape = document.createTextNode(texte.value);
+//     let para = document.createElement("p");
+
+//     para.appendChild(txtTape);
+//     container.appendChild(para);
+//     }
+// )
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .devientVert{
+            background-color: aquamarine;
+        }
+
+        .devientRouge{
+            background-color: red;
+        }
+
+        .devientColor {
+            background-color: black;
+            color: white;
+        }
+
+        .devientJaune {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <div></div>
+
+    <h1>titre</h1>
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, voluptates.</p>
+
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <br>
+    <br>
+    <p class="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <p class="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+    <p class="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, ratione ipsa laborum eaque accusamus harum consequuntur dignissimos rerum. Dolore, voluptatibus.</p>
+
+    <script>
+        
+       let monTitre =  document.getElementsByTagName("h1")[0]
+       console.log(monTitre);
+       let para1 = document.getElementById("p1")
+       console.log(para1);
+       let para2 = document.getElementsByClassName("p2")[2]
+        console.log(para2);
+       let para3= document.getElementsByClassName("p3")[1]
+       let para4= document.getElementsByClassName("p2")[3]
+
+        
+        para2.addEventListener("click",()=>{
+            para2.classList.toggle("devientVert");
+        })
+
+        para3.addEventListener("click", () => {
+            para3.classList.add("devientRouge")
+        } 
+        )
+
+        para4.addEventListener("click", ()=> {
+            para4.classList.toggle("devientColor")
+        })
+
+        let para5 = document.getElementsByClassName("p3")[2]
+        para5.addEventListener("click",() => {
+            para5.classList.add("devientVert")
+        })
+
+        let para6 = document.getElementsByClassName("p2")[1];
+        para6.addEventListener("click", () => {
+            para6.classList.add("devientJaune")
+        })
+
+
+
+    </script>
+    
+</body>
+</html>

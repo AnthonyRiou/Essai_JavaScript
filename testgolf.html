@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function afficheRetour(retx){
+    return retx.toUpperCase()
+}
+
+function fleche(v) {
+console.log(`COUCOU ${v}`)
+} 
+
+function golfScore(tab,par, strokes) {
+// Only change code below this line
+if (strokes === 1) {return tab[0]
+}
+else if (strokes <= par -2) {return tab[1]
+}
+else if (strokes ===  par -1) {return tab[2]
+} 
+else if (strokes === par) {return tab[3]
+}
+else if (strokes === par +1) {return tab[4]}
+
+return "Change Me";
+// Only change code above this line
+}
+
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+const t = ["c1","c2","c3","c4","c5"]
+
+
+fleche(afficheRetour(golfScore(names,5, 4)))
+
+let retourdet = golfScore(t,5, 4);
+afficheRetour(retourdet)
+fleche("moi")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

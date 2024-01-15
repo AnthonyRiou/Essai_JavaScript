@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id ="container">
+        <!-- <h1>nom</h1>
+        <p>adresse</p>
+        <p1>cp.ville</p1> -->
+    </div>
+
+    <script> 
+
+
+
+    function afficheInfos(tab) {
+        tab.forEach(item => {
+            let nomPrenom = document.createElement("h1");
+            nomPrenom.innerHTML = `${item.nom} ${item.prenom}`;
+            let nom = document.getElementById("container");
+            nom.append(nomPrenom);
+            let adresse = document.createElement("p");
+            adresse.innerHTML = `${item.adresse.rue}`;
+            console.log(adresse);
+            let adress = document.getElementById("container");
+            adress.append(adresse);
+            let cpVille = document.createElement("p1");
+            cpVille.innerHTML = `${item.adresse.cp} ${item.adresse.ville}`;
+            console.log(cpVille);
+            let cp = document.getElementById("container");
+            cp.append(cpVille);
+        }
+        )
+    }
+    
+
+
+
+
+
+
+
+
+
+
+    let clients = [{
+            nom: "Dupont",
+            prenom: "Valentin",
+            adresse: {
+                rue: "17 rue Villeneuve",
+                cp: "69000",
+                ville: "Lyon"
+            }
+        },
+            {
+                nom: "Deedee",
+                prenom: "Ramones",
+                adresse: {
+                    rue: "Madison",
+                    cp: "69000",
+                    ville: "New-York"
+                }
+            },
+            {
+                nom: "Lemy",
+                prenom: "Motorhead",
+                adresse: {
+                    rue: "Portobello",
+                    cp: "69000",
+                    ville: "London"
+                }
+            }]
+
+
+ 
+
+        
+      afficheInfos(clients)      
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

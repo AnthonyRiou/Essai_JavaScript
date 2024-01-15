@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+
+    // function Personn(a,n) {
+    //     this.nom = n ,
+    //     this.age = a,
+    //     this.presentation = () => {
+    //         console.log ("I am" + this.nom + "I am" + this.age)
+    //     }
+    // }
+
+    // let Tony = new Personn(42, "Tony")
+    // console.log(Tony)
+    // console.log(Tony.presentation())
+
+    class Personn {
+        constructor(name, age) {
+            this.name=name;
+            this.age=age
+        }
+        present() {
+            console.log("Hello, je m'appelle "+ this.name + " et j'ai " +this.age +" ans.")
+        }
+    }
+
+    let Tony = new Personn("Tony",42)
+    console.log(Tony)
+    console.log(Tony.present())
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

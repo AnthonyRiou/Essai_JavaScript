@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+ .nouvelleClass {
+    border : 3px dashed red
+ }
+
+ .secondeClass {
+    border : 4px solid green;
+    background-color: aqua;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+ }
+
+ .triClass {
+    border : 4px solid white;
+    background-color: black;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+
+</style>
+
+<body>
+
+    <h1>Document</h1>
+    <p id="debut"></p>
+    <p id="p1" class="cours">paragraphe 1</p>
+    <p id="p2" class="cours">paragraphe 2</p>
+    <p id="p3" class="cours">paragraphe 3</p>
+    <p id="p4" class="cours">paragraphe 4</p>
+
+    <form action="..." method="post">
+        <input type="text" name="un nom" />
+    </form>
+    
+  
+    <button id ="b1">ADD BORDER</button>
+    <button id ="b2">REMOVE BORDER</button>
+    <br>
+    <button id="b3">Go</button>
+    <br>
+
+    <div id="affiche"></div>
+
+    <script>
+
+
+// SELECTION
+document.getElementById("debut").innerHTML = "<strong>change le texte</strrong>"
+document.getElementsByClassName("cours")[1].innerHTML = "modif 2éme elt de la class Cours"
+document.getElementsByTagName("h1")[0].innerHTML = "Du Texte"
+console.log(document.getElementsByName("un nom")[0])
+console.log(document.querySelectorAll(".cours")[0])
+
+
+document.getElementById("b1").addEventListener("click", () => {
+    document.getElementById("debut").classList.add('nouvelleClass')
+})
+
+document.getElementById("b2").addEventListener("click",() => {
+    document.getElementById("debut").classList.remove('nouvelleClass')
+})
+
+// document.getElementById("b3").addEventListener("click", () => {
+//     document.getElementById("p3").classList.toggle("secondeClass")
+// })
+
+
+document.getElementById("b3").addEventListener("click", () => {
+    document.getElementById("p4").classList.add("triClass")
+})
+
+document.getElementById("p3").innerHTML = "Nouveau Titre"
+document.getElementsByTagName("h1")[0].innerHTML = "Grand Titre"
+
+
+
+    </script>
+    
+</body>
+</html>
+
+// function afficheInfos(tab) {
+    //     tab.forEach(item => {
+    //         let nomPrenom = document.createElement("h1");
+    //         nomPrenom.innerHTML = `${item.nom} ${item.prenom}`;
+    //         let nom = document.getElementById("container");
+    //         nom.append(nomPrenom);
+    //         let adresse = document.createElement("p");
+    //         adresse.innerHTML = `${item.adresse.rue}`;
+    //         let adress = document.getElementById("container");
+    //         adress.append(adresse);
+    //         let cp = document.createElement("p1");
+    //         cp.innerHTML = `${item.adresse.cp} ${item.adresse.ville}`;
+    //         let cpVille = document.getElementById("container");
+    //         cpVille.append(cp);
+    //     }
+    //     )
+    // }

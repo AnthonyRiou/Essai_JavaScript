@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+.devientJaune {
+    background-color: yellow;
+    color: red;
+}
+
+.devientVert {
+    background-color: greenyellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.devientBleu {
+    background-color: aqua;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: line-through;
+}
+
+.Jaune {
+    background-color: yellow;
+}
+
+
+</style>
+
+<body>
+    
+<h1>Grand Titre</h1>
+
+<p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+<p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+<p class="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p><br>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+<p class="p2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p><br>
+<p class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+<p class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+<p class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste impedit, maxime accusantium vitae nisi error? Delectus, iste ex quisquam molestiae cum repudiandae, iure expedita reiciendis possimus non, rem cumque.</p>
+
+<button id="button">GO</button>
+
+<div id="container"></div>
+
+<script>
+
+let para1 = document.getElementsByClassName("p1")[1];
+para1.addEventListener("click", ()=> {
+    para1.classList.add("devientJaune")
+})
+
+let para2 = document.getElementsByClassName("p1")[0];
+para2.addEventListener("click", ()=> {
+    para2.classList.add("devientVert")
+})
+
+let para3= document.getElementsByClassName("p1")[2];
+para3.addEventListener("click", () => {
+    para3.classList.add("devientBleu")
+})
+
+const but = document.getElementById("button");
+const cont = document.getElementById("container");
+
+but.addEventListener("click", () => {
+    cont.innerHTML = '<h1>Youpi<h1> tagada'
+    cont.classList.add("Jaune")    
+})
+
+</script>
+
+</body>
+</html>
